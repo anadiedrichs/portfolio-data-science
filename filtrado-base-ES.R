@@ -46,8 +46,8 @@ print(datos[fila_nro,columna_nro])
 print(datos[1:5,1:3])
 #' Observe que el primer lugar antes de la coma es para indexar filas y luego de la coma para columnas.
 #' 
-#' 3) Cuantos autos compactos
-sum(datos[,"model"])
+#' 3) Cuantos autos new beetle
+sum(datos[,"model"] == "new beetle")
 #' 4) Obtener un listado de fabricantes
 unique(datos$manufacturer)
 #' 5) Obtener el total de corolla
@@ -76,39 +76,39 @@ datos[val,]
 
 #' # Filtrar usando sentencias lógicas
 #' 
-#' Si quiero filtrar la columna Clientes donde Esperar sea 1 (que si prefieren esperar),
+#' Si quiero filtrar la columna manufacturer donde year sea 2008,
 #' puedo usar variables que guarden el valor que me interesa obtener/filtrar.
-atributo <- "Clientes"
-target <- "Esperar"
-label <- 1
+atributo <- "manufacturer"
+target <- "year"
+label <- 2008
 #' Filtramos usando lo siguiente
-restaurant[restaurant[,target]==label,atributo]
-#' Note que ``restaurant[,target]==label`` regresa un vector con valores TRUE y FALSE
-print(restaurant[,target]==label)
+datos[datos[,target]==label,atributo]
+#' Note que ``datos[,target]==label`` regresa un vector con valores TRUE y FALSE
+print(datos[,target]==label)
 #' Luego si quiero contar cuantas veces aparece el valor del atributo, 
 #' guardo los datos en una variable c (para hacer legible el ejemplo) y usamos la función table.
-c <- restaurant[restaurant[,target]==label,atributo]
+c <- datos[datos[,target]==label,atributo]
 print(c)
 table(c)
 
 #' Para obtener la cantidad en tipo numérico de uno de los atributos
-table(c)["Lleno"]
-is.numeric(table(c)["Lleno"]) # acceder al valor numérico de Lleno
+table(c)["chevrolet"]
+is.numeric(table(c)["chevrolet"]) # acceder al valor numérico de Lleno
 #' Puedo calcular las proporciones (cantidad de elementos sobre su total)
 print(table(c)/sum(table(c)))
 
 #' ## Indexar o filtrar por más de una condición
-#' Ejemplo, filtrar con clientes=Algunos y Esperar=1
-restaurant[(restaurant[,target]==label) & (restaurant[,atributo]=="Algunos"),]
+#' Ejemplo, filtrar con model=audi y year=2008
+datos[(datos[,target]==label) & (datos[,atributo]=="audi"),]
 
-#' Puedo crear varias condiciones, agregamos un filtro por tipo de restaurant
-condicion <- (restaurant[,target]==label) & (restaurant[,atributo]=="Algunos") & (restaurant[,"Tipo"] %in% c("Frances","Italiano"))
+#' Puedo crear varias condiciones, agregamos un filtro por tipo de transmisión
+condicion <- (datos[,target]==label) & (datos[,atributo]=="audi") & (datos[,"trans"] %in% c("manual(m6)","auto(av)"))
 
-restaurant[condicion,]
+datos[condicion,]
 
-#' Cuantos cumplen que Clientes sea igual a "Algunos" y "Esperar" = 1
+#' Cuantos autos audi del año 2008 con transmisión manual hay en el dataset
 #' 
-nrow(restaurant[(restaurant[,target]==label) & (restaurant[,atributo]=="Algunos"),] )
+nrow(datos[condicion,] )
 
 #' Asi como usamos el operado logico AND & se puede usar OR | o el NOT !. 
 #' Para ello consulte [este link](https://www.statmethods.net/management/operators.html),
