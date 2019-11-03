@@ -27,3 +27,23 @@ Repo: https://github.com/anadiedrichs/diedrichs2017prediction-frost-experiments
 
 Repo: https://github.com/anadiedrichs/jugos-uva-canizo
 
+### Reinforcement learning introduction
+
+* Teaching material for artificial inteligence class. 
+* Introduction to reinforcement learning with OpenAI Gym. 
+* Topics: MDP, policy, value iteration, policy iteration, Q-learning
+* Repository link https://github.com/anadiedrichs/rl-ai
+
+### Time series: a data science introduction
+
+Teaching materials for IoT class.
+
+Repository link https://github.com/anadiedrichs/time-series-analysis
+
+Time series topics:
+* Tools: python, jupyter notebook, pandas, matplotlib
+* Time series visualization
+* Time series manipulation: dealing with missing values, filter
+* FFT, integration, etc
+* Projects for time series analysis.
+
