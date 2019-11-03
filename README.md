@@ -47,3 +47,9 @@ Time series topics:
 * FFT, integration, etc
 * Projects for time series analysis.
 
+### Spotify clustering
+
+Teaching materials for machine learning class. We used clustering over Spotify data. 
+link repository https://github.com/anadiedrichs/AM2019SpotifyClustering
+
+
