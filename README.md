@@ -52,4 +52,6 @@ Time series topics:
 Teaching materials for machine learning class. We used clustering over Spotify data. 
 link repository https://github.com/anadiedrichs/AM2019SpotifyClustering
 
+### Time series with keras
 
+Repository in https://github.com/anadiedrichs/keras-tutorial
