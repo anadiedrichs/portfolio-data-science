@@ -1,5 +1,13 @@
 # portfolio-data-science
 
+### frost
+
+An R package which contains a compilation of empirical methods used by farmers and agronomic engineers to predict the minimum temperature to detect a frost event. These functions use variables such as environmental temperature, relative humidity, and dew point.
+
+The version 0.0.4 of frost is available on CRAN repository https://CRAN.R-project.org/package=frost 
+
+* Repository https://github.com/anadiedrichs/frost
+* Webpage https://anadiedrichs.github.io/frost/
 
 ### Analizando aportes electorales
 
