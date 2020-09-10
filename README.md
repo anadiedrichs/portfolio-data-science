@@ -62,4 +62,4 @@ link repository https://github.com/anadiedrichs/AM2019SpotifyClustering
 
 ### Time series with keras
 
-Repository in https://github.com/anadiedrichs/keras-tutorial
+Not up to date tutorials about time series with old versions of keras. Repository in https://github.com/anadiedrichs/keras-tutorial
